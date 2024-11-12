@@ -65,14 +65,14 @@ h1:not(.navbar h1), h2 {
 }
 
 a {
-    color: #ffffff; /* White text by default */
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #66FCF1; /* Light blue on hover */
+    color: #66FCF1;
 }
 
 strong {
@@ -84,13 +84,43 @@ strong {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
 }
 
 .header img {
     position: absolute;
-    top: 45px;
+    top: 40px;
     right: 35px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header img {
+        position: static;
+        margin-top: 20px;
+        width: 80px;
+        height: 80px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
 }
